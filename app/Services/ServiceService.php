@@ -22,7 +22,7 @@ class ServiceService
         }
     }
 
-    public function getById(string $id): ?Pricing
+    public function getById(int $id): ?Pricing
     {
         try {
             $item = Pricing::where('id', $id)

@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Services\GlobalInfoService;
-
+use Illuminate\Http\Request;
 
 class GlobalInfoController extends Controller
 {

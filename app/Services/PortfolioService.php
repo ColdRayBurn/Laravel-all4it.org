@@ -29,7 +29,7 @@ class PortfolioService
         }
     }
 
-    public function getById(string $id): ?PortfolioItem
+    public function getById(int $id): ?PortfolioItem
     {
         try {
             $item = PortfolioItem::where('id', $id)

@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Services\PortfolioService;
-
+use Illuminate\Http\Request;
 
 class PortfolioController extends Controller
 {
@@ -40,7 +40,7 @@ class PortfolioController extends Controller
      */
     public function show(string $id)
     {
-        $item = $this->portfolioService->getById($id);
+        $item = $this->portfolioService->getById((int)$id);
 
         if (!$item) {
             return response()->json(['message' => 'portfolio item not found'], 404);

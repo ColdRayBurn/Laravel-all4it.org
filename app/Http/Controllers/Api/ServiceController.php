@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Services\ServiceService;
-
+use Illuminate\Http\Request;
 
 class ServiceController extends Controller
 {
@@ -41,7 +41,7 @@ class ServiceController extends Controller
     public function show(string $id)
     {
 
-        $item = $this->serviceService->getById($id);
+        $item = $this->serviceService->getById((int)$id);
 
         if (!$item) {
             return response()->json(['message' => 'service not found'], 404);

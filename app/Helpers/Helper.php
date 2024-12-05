@@ -9,9 +9,11 @@ use Intervention\Image\ImageManager;
 
 class Helper
 {
-    public static function removeOuterPTag(string $html): string
+    public static function removeOuterPTag(?string $html): ?string
     {
-        //$pattern = '/^<p>(?![^<]*<p>)(.*?)(<\/p>)$/s';
+        if(empty($html)){
+            return $html;
+        }
 
         // Регулярное выражение для удаления единственного внешнего тега <p>
         $pattern = '/^<p>(?!.*<p>)(.*)<\/p>$/s';

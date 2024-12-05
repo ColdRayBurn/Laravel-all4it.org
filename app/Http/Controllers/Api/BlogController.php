@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Services\BlogService;
-
+use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
@@ -40,7 +40,7 @@ class BlogController extends Controller
      */
     public function show(string $id)
     {
-        $item = $this->blogService->getById($id);
+        $item = $this->blogService->getById((int)$id);
 
         if (!$item) {
             return response()->json(['message' => 'blog item not found'], 404);

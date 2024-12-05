@@ -39,7 +39,7 @@ class BlogService
         }
     }
 
-    public function getById(string $id): ?Blog
+    public function getById(int $id): ?Blog
     {
         try {
             $item = Blog::where('id', $id)
