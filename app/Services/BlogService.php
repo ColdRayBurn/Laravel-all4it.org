@@ -44,6 +44,7 @@ class BlogService
         try {
             $item = Blog::where('id', $id)
                 ->where('isActive', true)
+                ->where('publishDatetime', '<=', date('Y-m-d H:i:s'))
                 ->select('id', 'title', 'image', 'content', 'publishDatetime')
                 ->first();
 
