@@ -18,6 +18,9 @@ class ContactService
             if (!$item) {
                 return null;
             }
+            if ($item->content) {
+                $item->content = html_entity_decode($item->content);
+            }
 
             return $item;
         } catch (\Exception $e) {

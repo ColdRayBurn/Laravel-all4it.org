@@ -13,6 +13,7 @@ use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class ContactResource extends Resource
 {
@@ -47,14 +48,24 @@ class ContactResource extends Resource
 
                 Forms\Components\TextInput::make('title')
                     ->label('Заголовок'),
-                Forms\Components\RichEditor::make('content')
-                    ->label('Контент')
-                    ->required()
-                    ->disableToolbarButtons([
-                        'attachFiles',
-                        'codeBlock',
-                        'strike',
-                    ]),
+//                Forms\Components\RichEditor::make('content')
+//                    ->label('Контент')
+//                    ->required()
+//                    ->disableToolbarButtons([
+//                        'attachFiles',
+//                        'codeBlock',
+//                        'strike',
+//                    ]),
+                Forms\Components\Fieldset::make('Контент')
+                    ->schema([
+                        TinyEditor::make('content')
+                            ->label('Текст страницы')
+                            ->required()
+                          ->showMenuBar()
+                    ])
+                    ->columns(1),
+
+
             ]);
     }
 
