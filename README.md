@@ -1,4 +1,4 @@
-<p style="display: flex; justify-content: center; align-items: center;">
+<p align="center" style="display: flex; justify-content: center; align-items: center;">
   <a href="https://all4it.org" target="_blank">
     <img src="https://all4it.org/storage/01JCJT95TT3PTZTDFW5ESD79FP.svg" height="80" alt="All4IT Logo">
   </a>
