@@ -21,8 +21,6 @@ The project follows a clean and maintainable architecture:
 
 This separation of concerns makes the application scalable, maintainable, and easy to extend.
 
----
-
 ## Features
 
 - **API Endpoints**: A comprehensive set of RESTful API endpoints that handle everything required for web forms, retrieving information from the database, and user authentication. The API seamlessly integrates with the frontend to manage form submissions, fetch data dynamically, and ensure secure access with built-in user authentication features, making it easy to manage both user interactions and data processing.
@@ -30,22 +28,16 @@ This separation of concerns makes the application scalable, maintainable, and ea
 - **Authentication & Authorization**: Built-in user authentication using Laravel's Passport or Sanctum, ensuring secure API access.
 - **Validation**: All input data is validated to ensure correctness and prevent security vulnerabilities.
 
----
-
 ## Frontend
 
 The front-end of the application is developed in React and exists in a separate repository. The React application communicates with the Laravel API to fetch and display data dynamically. For more details on the front-end setup, visit the repository:
 
 [Frontend Repository](https://github.com/ColdRayBurn/React-all4it.org)
 
----
-
 ## **Preview**
 Below is a screenshot of the website:
 
 ![Website Screenshot](https://all4it.org/storage/all4it.jpg "Website Screenshot")
-
----
 
 ## Installation
 
@@ -81,7 +73,6 @@ Below is a screenshot of the website:
 
 The API should now be up and running at `http://localhost:8000`.
 
----
 
 ## Admin Panel
 
@@ -93,12 +84,9 @@ The admin panel is powered by [Filament](https://filamentphp.com/), offering a m
 
 Filament provides an intuitive and fast interface for managing your web platform without the need for complex development.
 
----
 
 ## **Contact Us**
 
 Interested in building your custom e-commerce solution? Contact our team for a consultation and let’s create something exceptional together!
 
 ## 💼 [Mail us](mailto:info@all4it.org) | 🌐 [Our web-site](https://all4it.org/)
-
----
