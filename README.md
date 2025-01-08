@@ -36,7 +36,7 @@ This separation of concerns makes the application scalable, maintainable, and ea
 
 The front-end of the application is developed in React and exists in a separate repository. The React application communicates with the Laravel API to fetch and display data dynamically. For more details on the front-end setup, visit the repository:
 
-[Frontend Repository](https://github.com/frontend)
+[Frontend Repository](https://github.com/ColdRayBurn/React-all4it.org)
 
 ---
 
@@ -61,9 +61,9 @@ Below is a screenshot of the website:
 
 1. Clone the repository:
 
-   `git clone https://github.com/repo`
+   `git clone https://github.com/ColdRayBurn/Laravel-all4it.org.git`
 
-   `cd your-laravel-repo`
+   `cd Laravel-all4it.org`
 
 2. Install dependencies: `composer install`
 
