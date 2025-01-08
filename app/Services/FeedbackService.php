@@ -8,14 +8,15 @@ use Illuminate\Support\Facades\Mail;
 
 class FeedbackService
 {
-    private string $adminMail = 'themichaelchannel@gmail.com';
 
     public function createFeedback(array $data): void
     {
         try {
             // Преобразуем данные
-            $data['phoneNumber'] = $data['phonenumber'];
-            unset($data['phonenumber']);
+            if (isset($data['phonenumber'])){
+                $data['phoneNumber'] = $data['phonenumber'];
+                unset($data['phonenumber']);
+            }
 
             // Создаем запись в базе данных
             $feedback = Feedback::create($data);
@@ -29,7 +30,7 @@ class FeedbackService
 
     private function sendFeedbackEmail(Feedback $feedback): void
     {
-        Mail::to($this->adminMail)
-            ->send(new FeedbackSubmitted($feedback->toArray()));
+        Mail::to(env('ADMIN_EMAIL'))
+            ->queue(new FeedbackSubmitted($feedback->toArray()));
     }
 }

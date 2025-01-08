@@ -9,11 +9,14 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class FeedbackSubmitted extends Mailable
+class FeedbackSubmitted extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
+    public int $tries = 3;
+    public int $backoff = 60;
     public $data;
+
     /**
      * Create a new message instance.
      */
@@ -29,7 +32,7 @@ class FeedbackSubmitted extends Mailable
      */
     public function build()
     {
-        return $this->subject('Новое сообщение обратной связи')
+        return $this->subject('All4it - Новое сообщение обратной связи')
             ->view('emails.feedback')
             ->with('data', $this->data);
     }

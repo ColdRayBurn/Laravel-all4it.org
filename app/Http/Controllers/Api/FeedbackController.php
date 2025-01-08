@@ -33,11 +33,7 @@ class FeedbackController extends Controller
         try {
             // Валидация
             $validatedData = $request->validate([
-                'name' => 'required|string|max:255',
                 'email' => 'required|email|max:255',
-                'companyName' => 'required|string|max:255',
-                'phonenumber' => 'required|string|max:255',
-                'comment' => 'required|string',
             ]);
 
             $this->feedbackService->createFeedback($validatedData);
